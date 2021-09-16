@@ -1,33 +1,20 @@
-const repositoryName = "site cabuloso";
+import { RepositoryItem } from "./RepositoryItem";
+
+const repository = {
+  title: 'unform',
+  description: 'Form em React',
+  link: "https://github.com/unform/unform"
+};
 export function RepositoryList() {
   return (
     <section>
       <h1>Lista de respositórios</h1>
       <ul>
-        <li>
-          <strong>{repositoryName}</strong>
-          <p>Forms in React</p>
-          <a href="">
-            Acessar repositório
-          </a>
-        </li>
-
-        <li>
-          <strong>unform</strong>
-          <p>Forms in React</p>
-          <a href="">
-            Acessar repositório
-          </a>
-        </li>
-
-        <li>
-          <strong>unform</strong>
-          <p>Forms in React</p>
-          <a href="">
-            Acessar repositório
-          </a>
-        </li>
-
+        <RepositoryItem 
+          repository={ repository } />
+        <RepositoryItem repository={ repository }/>
+        <RepositoryItem repository={ repository }/>
+        <RepositoryItem repository={ repository }/>
       </ul>
     </section>
   )
